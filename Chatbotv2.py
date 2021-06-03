@@ -10,12 +10,10 @@ class Chatbot:
         bot = Chatbot(reaktionen, zufallsantworten)
     """
 
-
     def __init__(self, reaktionen, zufallsantworten):
         # Konstruktor der Klasse
         self.__reaktionen = dict(reaktionen)
         self.__zufallsantworten = list(zufallsantworten)
-
 
     def set_message(self, message):
         """ set_Message
@@ -24,7 +22,6 @@ class Chatbot:
             bot.set_message(nutzereingabe)
         """
         self.__message = str(message)
-
 
     def get_response(self):
         """ get_response
@@ -42,11 +39,4 @@ class Chatbot:
                 self.__response = self.__reaktionen[word]
         if not self.__intelligentAnswers:
             self.__response = random.choice(self.__zufallsantworten)
-        
         return self.__response
-
-
-
-
-
-
